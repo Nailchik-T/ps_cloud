@@ -1,0 +1,41 @@
+
+.container {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: auto 100px;
+  grid-template-areas:
+    "sidebar main"
+    "sidebar footer";
+}
+
+.sideBar {
+  grid-area: sidebar;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #22232b;
+  overflow-y: auto;
+  width: 60px;
+}
+
+.main {
+  grid-area: main;
+  padding:90px;
+  @media (max-width: 600px) {
+    padding:90px 20px;
+  }
+}
+
+.footer {
+  display: grid;
+  align-items: center;
+  grid-area: footer;
+  column-gap: 50px;
+  background-color: #ffffff;
+  height: 340px;
+  padding:90px;
+  @media (max-width:700px) {
+    padding:20px;
+  }
+}

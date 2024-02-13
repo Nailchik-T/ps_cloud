@@ -1,0 +1,67 @@
+
+.select-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 10px;
+
+  &__image {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+  &__dropdown {
+    width: 100%;
+    height: 40px;
+    padding: 0 50px 0 15px ;
+    background: transparent;
+    border: 2px solid #bdcdd6;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 600;
+    margin-bottom: 13px;
+    font-size: 16px;
+    appearance: none;
+    background: url('../../assets/arrow.png') no-repeat calc(100% - 18px) center;
+    overflow: hidden;
+
+    ~ .select-container__label {
+      position: absolute;
+      top: 7px;
+      left: 10px;
+      padding: 0 5px;
+      transition: top .5s;
+    }
+
+    ~ .select-container__label {
+      top: -6px;
+      font-size: 11px;
+      background-color: #ffff;
+    }
+  }
+  &__cost{
+    display: inline;
+    font-size: 16px;
+    border-bottom: 1px dashed #20a8d8;
+  }
+  @media (max-width: 700px) {
+    padding: 0;
+    gap: 7px;
+    margin-bottom: 5px;
+    &__image{
+      margin-top: 10px;
+      width: 20px;
+      height: 20px;
+    }
+    &__dropdown{
+      font-size: 12px;
+      padding: 0 50px 0 15px ;
+    }
+    &__cost{
+      font-size: 13px;
+    }
+  }
+}
