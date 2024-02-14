@@ -21,20 +21,19 @@
 
 .main {
   grid-area: main;
-  padding:90px;
-  @media (max-width: 600px) {
-    padding:90px 20px;
+  padding:120px 90px 50px 90px;
+  @media (max-width: 1000px) {
+    padding:80px 20px;
   }
 }
 
 .footer {
   display: grid;
-  align-items: center;
   grid-area: footer;
-  column-gap: 50px;
   background-color: #ffffff;
-  height: 340px;
-  padding:90px;
+  max-width: 1920px;
+  height: 349px;
+  padding:0 90px;
   @media (max-width:700px) {
     padding:20px;
   }

@@ -10,8 +10,9 @@ interface SelectProps {
   items: SelectItem[];
   icon?: string;
   label: string;
+  information?: boolean;
 }
-const Select = ({ items, icon, label }: SelectProps) => {
+const Select = ({ items, icon, label, information }: SelectProps) => {
   const [selectedItem, setSelectedItem] = useState(items[0]);
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -39,9 +40,12 @@ const Select = ({ items, icon, label }: SelectProps) => {
               </option>
             ))}
           </select>
-          <label className="select-container__label">{label}</label>
+          <label className="select-container__label">
+            {label}
+            {information && <span>?</span>}
+          </label>
           <h3 className="select-container__cost">
-            {selectedItem.cost.toLocaleString()} тг/мес
+            <span> {selectedItem.cost.toLocaleString()} </span>тг/мес
           </h3>
         </div>
       </div>

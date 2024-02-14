@@ -22,7 +22,7 @@
     border-radius: 10px;
     outline: none;
     font-weight: 600;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
     font-size: 16px;
     appearance: none;
     background: url('../../assets/arrow.png') no-repeat calc(100% - 18px) center;
@@ -34,18 +34,33 @@
       left: 10px;
       padding: 0 5px;
       transition: top .5s;
+      font-size: 11px;
+      font-weight: 400;
+
     }
 
     ~ .select-container__label {
-      top: -6px;
+      top: -10px;
       font-size: 11px;
       background-color: #ffff;
+      padding: 3px;
+      span{
+        color: #ffffff;
+        font-weight: bold;
+        padding: 1px 6px;
+        font-size:12px;
+        z-index: 45;
+        margin-left: 5px;
+        background-color: #20a8d8;
+        border-radius: 100%;
+      }
     }
   }
   &__cost{
     display: inline;
     font-size: 16px;
     border-bottom: 1px dashed #20a8d8;
+    font-weight: bold;
   }
   @media (max-width: 700px) {
     padding: 0;

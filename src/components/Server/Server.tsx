@@ -11,14 +11,14 @@ const Server = () => {
   return (
     <>
       <div className="server">
-        <h2 className="server__name">Сервер</h2>
+        <h2 className="server__name">Сервер 1</h2>
         <div className="server__container">
           <Select
             items={[
               {
                 value: "2",
                 label:
-                  "2 × Intel Xeon E5-2620 v3 2.40/3.20 Ггц (всего 12 ядер, 24 пото",
+                  "2 × Intel Xeon E5-2620 v3 2.40/3.20 Ггц (всего 12 ядер, 24 потока)",
                 cost: "29500",
               },
               { value: "3", label: "Audi", cost: "42500" },
@@ -92,7 +92,44 @@ const Server = () => {
               { value: "3", label: "SSD M.2 2280 1TB", cost: "10500" },
             ]}
             icon={network}
-            label="Системный диск 1"
+            label="Сетевой порт 1"
+          />
+          <Select
+            items={[
+              {
+                value: "2",
+                label: "Нет",
+                cost: "0",
+              },
+              { value: "3", label: "SSD M.2 2280 1TB", cost: "10500" },
+            ]}
+            icon={network}
+            label="Сетевой порт 2"
+          />
+          <Select
+            items={[
+              {
+                value: "2",
+                label: "Нет",
+                cost: "0",
+              },
+              { value: "3", label: "SSD M.2 2280 1TB", cost: "10500" },
+            ]}
+            icon={network}
+            label="Сетевой порт 3"
+          />
+          <Select
+            items={[
+              {
+                value: "2",
+                label: "Нет",
+                cost: "0",
+              },
+              { value: "3", label: "SSD M.2 2280 1TB", cost: "10500" },
+            ]}
+            icon={network}
+            information
+            label="IPMI"
           />
         </div>
         <div className="server__footer">
@@ -100,7 +137,9 @@ const Server = () => {
             Все сервера комплектуются двумя блоками питания и подключаются к
             независимым линиям электроснабжения.
           </h3>
-          <h2 className="server__total_sum">232 000 тг/мес</h2>
+          <h2 className="server__total_sum">
+            <span>232 000</span> тг/мес
+          </h2>
         </div>
       </div>
       <div className="server__add">Добавить сервер</div>
@@ -119,6 +158,7 @@ const Server = () => {
             ]}
             icon={ip}
             label="Блок IP-адресов"
+            information
           />
           <div className="ip__information">
             <img
@@ -147,13 +187,16 @@ const Server = () => {
               { value: "4", label: "Citroen", cost: "15500" },
             ]}
             icon={security}
+            information
             label="Выберите блок"
           />
         </div>
       </div>
       <div className="server__adding-cart">
         <div className="server__adding-btn">Добавить в корзину</div>
-        <div className="server__total_sum">за 415 000 тг/мес</div>
+        <div className="server__total_sum">
+          за <span>415 000</span> тг/мес
+        </div>
         <div className="server__description">
           В стоимость входит подключение к сети Интернет на скорости до 100
           Мбит/c, без ограничения объема трафика.

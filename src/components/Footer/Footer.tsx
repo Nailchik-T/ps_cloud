@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <>
+    <div className="footer">
       <div className="footer__copyright">
         &copy; 2003–2023 ТОО «Интернет-компания PS»
       </div>
@@ -49,7 +49,7 @@ const Footer = () => {
           <img className="footer__social-icons" src={telegram} alt="telegram" />
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
